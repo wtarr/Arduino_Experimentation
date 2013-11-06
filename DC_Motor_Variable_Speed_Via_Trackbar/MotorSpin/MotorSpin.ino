@@ -22,8 +22,10 @@ void loop()                     // run over and over again
    while (Serial.available())
    {
      char d = Serial.read();
-     str.concat(d);     
+     str.concat(d);          
    }
+   
+   Serial.println("Recieved " + str);
    
    int num = str.toInt();
    
